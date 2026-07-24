@@ -32,7 +32,7 @@ Write posts in markdown. Get article pages, tag filters, reading times, RSS, a s
 
 ```bash
 # 1. Grab the template
-git clone https://github.com/pixelandoak/nova-blog-template.git my-blog
+git clone https://github.com/haider484991/nova-nextjs-blog-template.git my-blog
 cd my-blog
 
 # 2. Install
