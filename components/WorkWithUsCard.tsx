@@ -11,7 +11,7 @@ export function WorkWithUsCard() {
         fast, SEO-ready websites for small businesses.
       </p>
       <a
-        href="https://pixelandoak.com?utm_source=nova-template"
+        href="https://pixelandoak.com/templates/nextjs-blog-template/?utm_source=nova-template"
         target="_blank"
         rel="noopener noreferrer"
         className="group mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-indigo-600 transition hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300"

@@ -31,7 +31,7 @@ export function Footer() {
           <p>
             Built by{" "}
             <a
-              href="https://pixelandoak.com?utm_source=nova-template"
+              href="https://pixelandoak.com/templates/nextjs-blog-template/?utm_source=nova-template"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-zinc-700 transition hover:text-indigo-600 dark:text-zinc-300 dark:hover:text-indigo-400"

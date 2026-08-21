@@ -32,7 +32,7 @@ export default function AboutPage() {
             dinner for four and still ship with a CMS you don&apos;t need. So
             we built Nova the way we build client sites at{" "}
             <a
-              href="https://pixelandoak.com?utm_source=nova-template"
+              href="https://pixelandoak.com/templates/nextjs-blog-template/?utm_source=nova-template"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-indigo-600 hover:underline dark:text-indigo-400"

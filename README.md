@@ -5,6 +5,7 @@ Nova is a free, open-source **Next.js blog template** with the polish of a premi
 Write posts in markdown. Get article pages, tag filters, reading times, RSS, a sitemap and generated cover art out of one `next build`. No CMS, no database, no stock photos, no server.
 
 **Live demo → [pixelandoak-nova.pages.dev](https://pixelandoak-nova.pages.dev)**
+**Template page → [pixelandoak.com/templates/nextjs-blog-template](https://pixelandoak.com/templates/nextjs-blog-template/)**
 
 ![Nova screenshot](./screenshot.png)
 
@@ -134,4 +135,4 @@ The footer includes a small "Built by Pixel & Oak" link. It's the only thing we 
 
 ---
 
-Built by [Pixel & Oak](https://pixelandoak.com) — we build fast, SEO-ready websites. If you'd like one without building it yourself, [say hello](https://pixelandoak.com?utm_source=nova-template).
+Built by [Pixel & Oak](https://pixelandoak.com/templates/nextjs-blog-template/) — we build fast, SEO-ready websites. If you'd like one without building it yourself, [say hello](https://pixelandoak.com/templates/nextjs-blog-template/?utm_source=nova-template).

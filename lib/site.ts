@@ -14,10 +14,10 @@ export const site = {
   author: {
     name: "Pixel & Oak",
     bio: "A web studio building fast, SEO-ready websites for small businesses.",
-    url: "https://pixelandoak.com",
+    url: "https://pixelandoak.com/templates/nextjs-blog-template/",
   },
   social: {
-    github: "https://github.com/pixelandoak",
+    github: "https://github.com/haider484991",
     x: "https://x.com/pixelandoak",
     linkedin: "https://www.linkedin.com/company/pixelandoak",
     rss: "/rss.xml",
