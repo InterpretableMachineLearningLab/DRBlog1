@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { SocialLinks } from "@/components/SocialLinks";
 
 export const metadata: Metadata = {
   title: "About",
@@ -129,9 +128,6 @@ export default function AboutPage() {
         </p>
       </section>
 
-      <div className="mt-10">
-        <SocialLinks />
-      </div>
     </div>
   );
 }

@@ -5,11 +5,11 @@ import { getAllPosts, getAllTags, toMeta } from "@/lib/posts";
 export const metadata: Metadata = {
   title: "Articles",
   description:
-    "Essays on web performance, static sites, dark mode, Tailwind CSS and the craft of building fast websites — from the Pixel & Oak studio journal.",
+    "Writing from the Interpretable Machine Learning Lab — interactive posts on interpretable models, dimensionality reduction, and the algorithms that come out of the lab.",
   openGraph: {
-    title: "Articles — Nova",
+    title: "Articles — Interpretable ML Lab",
     description:
-      "Essays on web performance, static sites, dark mode, Tailwind CSS and the craft of building fast websites.",
+      "Writing from the Interpretable Machine Learning Lab.",
     url: "/articles",
     type: "website",
   },
@@ -27,16 +27,9 @@ export default function ArticlesPage() {
             All articles
           </h1>
           <p className="mt-6 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
-            Everything we&apos;ve written, newest first — on performance,
-            static sites, design and the tools we reach for on every project.
-            Filter by topic, or subscribe via{" "}
-            <a
-              href="/rss.xml"
-              className="font-medium text-indigo-600 hover:underline dark:text-indigo-400"
-            >
-              RSS
-            </a>
-            .
+            Interactive writing from the lab — long-form explanations of the
+            algorithms and ideas we work on, each one designed to be read
+            and played with rather than just skimmed.
           </p>
         </header>
 

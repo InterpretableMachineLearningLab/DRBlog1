@@ -1,5 +1,4 @@
 import { ArticleRow } from "@/components/ArticleRow";
-import { SocialLinks } from "@/components/SocialLinks";
 import { getAllPosts, toMeta } from "@/lib/posts";
 
 export default function HomePage() {
@@ -21,9 +20,6 @@ export default function HomePage() {
             networks, and dimensionality-reduction methods that preserve
             real structure. This is where we write about the work.
           </p>
-          <div className="mt-6">
-            <SocialLinks />
-          </div>
         </div>
       </section>
 
