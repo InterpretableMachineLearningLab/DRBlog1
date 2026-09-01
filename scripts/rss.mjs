@@ -13,11 +13,11 @@ import path from "node:path";
 import matter from "gray-matter";
 
 const SITE = {
-  name: "Nova",
-  title: "Nova — Notes on the fast, simple web",
+  name: "Interpretable ML Lab",
+  title: "Interpretable Machine Learning Lab",
   description:
-    "Nova is the journal of Pixel & Oak, a studio that builds fast, SEO-ready websites. Essays on performance, static sites, design and the craft of the web.",
-  url: "https://pixelandoak-nova.pages.dev",
+    "The Interpretable Machine Learning Lab at Duke University, led by Cynthia Rudin. We build models that people can actually understand — sparse decision rules, interpretable neural networks, and dimensionality reduction methods that preserve real structure.",
+  url: "https://interpretablemachinelearninglab.github.io",
   language: "en-us",
 };
 

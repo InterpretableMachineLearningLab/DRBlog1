@@ -27,16 +27,16 @@ export function Footer() {
         </nav>
 
         <div className="flex flex-col items-center gap-1 text-sm text-zinc-500 sm:items-end dark:text-zinc-400">
-          <p>&copy; {new Date().getFullYear()} Pixel &amp; Oak. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {site.name}. All rights reserved.</p>
           <p>
-            Built by{" "}
+            Duke University ·{" "}
             <a
-              href="https://pixelandoak.com/templates/nextjs-blog-template/?utm_source=nova-template"
+              href={site.author.url}
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-zinc-700 transition hover:text-indigo-600 dark:text-zinc-300 dark:hover:text-indigo-400"
             >
-              Pixel &amp; Oak
+              Cynthia Rudin
             </a>
           </p>
         </div>
