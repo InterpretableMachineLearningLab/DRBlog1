@@ -65,7 +65,7 @@ export default async function ArticlePage({
   const older = index < posts.length - 1 ? toMeta(posts[index + 1]) : undefined;
 
   return (
-    <div className="mx-auto max-w-2xl px-4 pt-16 sm:px-6 sm:pt-20 lg:px-8">
+    <div className="mx-auto max-w-2xl px-5 pt-12 sm:px-6 sm:pt-16 lg:max-w-3xl lg:px-8">
       <Link
         href="/articles"
         className="group inline-flex items-center gap-1.5 text-sm font-medium text-zinc-500 transition hover:text-indigo-600 dark:text-zinc-400 dark:hover:text-indigo-400"
@@ -81,9 +81,9 @@ export default async function ArticlePage({
           <GradientCover
             tags={post.tags}
             seed={post.slug}
-            className="aspect-21/9 w-full"
+            className="aspect-16/9 w-full sm:aspect-21/9"
           />
-          <h1 className="mt-8 text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl dark:text-zinc-100">
+          <h1 className="mt-8 text-[1.75rem] leading-tight font-bold tracking-tight text-zinc-900 sm:text-4xl lg:text-[2.75rem] dark:text-zinc-100">
             {post.title}
           </h1>
           <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-zinc-500 dark:text-zinc-400">

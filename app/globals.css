@@ -145,3 +145,57 @@ body {
 .hljs-strong {
   font-weight: 600;
 }
+
+/* ------------------------------------------------------------------ */
+/* Responsive tables                                                   */
+/* MarkdownContent.tsx wraps every table in a horizontal scroll        */
+/* container; these rules stop the columns from crushing inside it.    */
+/* Without a floor, the four-column parameter table squeezed its       */
+/* narrowest column to ~72px on every screen from a 390px phone to a   */
+/* 1440px laptop, wrapping single words down a 233px-tall cell.        */
+/* ------------------------------------------------------------------ */
+
+.prose :where(table) {
+  min-width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.prose :where(th, td) {
+  min-width: 8.5rem;
+}
+
+/* The leading column of a comparison table carries the question, so it
+   needs more room than the columns answering it. */
+.prose :where(th:first-child, td:first-child) {
+  min-width: 12rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* Small screens                                                       */
+/* Code blocks already scroll; tightening them buys back horizontal    */
+/* room so there is less to scroll through on a phone.                 */
+/* ------------------------------------------------------------------ */
+
+@media (max-width: 639px) {
+  .prose :where(pre) {
+    padding: 0.85rem 1rem;
+    font-size: 0.8125rem;
+    line-height: 1.6;
+    border-radius: 0.625rem;
+  }
+
+  .prose :where(code):not(:where(pre code)) {
+    font-size: 0.84em;
+    overflow-wrap: break-word;
+  }
+}
+
+/* @tailwindcss/typography wraps every inline code span in literal backtick
+   glyphs via ::before / ::after. That convention predates the pill styling
+   above and fights it — `n_neighbors` was rendering as ``n_neighbors``
+   everywhere, which is noise in an article full of parameter names. */
+.prose :where(code):not(:where(pre code))::before,
+.prose :where(code):not(:where(pre code))::after {
+  content: none;
+}
