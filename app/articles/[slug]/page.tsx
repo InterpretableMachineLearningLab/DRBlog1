@@ -7,6 +7,7 @@ import { MarkdownContent } from "@/components/MarkdownContent";
 import { PostNav } from "@/components/PostNav";
 import { TagPill } from "@/components/TagPill";
 import { formatDate } from "@/lib/format";
+import { site } from "@/lib/site";
 import { getAllPosts, getPostBySlug, toMeta } from "@/lib/posts";
 
 interface Params {
@@ -37,7 +38,7 @@ export async function generateMetadata({
       url: `/articles/${post.slug}`,
       type: "article",
       publishedTime: post.date,
-      authors: ["Pixel & Oak"],
+      authors: [site.author.name],
       tags: post.tags,
     },
     twitter: {
