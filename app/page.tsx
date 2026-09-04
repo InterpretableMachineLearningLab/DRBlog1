@@ -15,13 +15,12 @@ export default function HomePage() {
             <span className="text-indigo-600 dark:text-indigo-400">Lab</span>
           </h1>
           <p className={`mt-6 ${bodyCopy} text-zinc-600 dark:text-zinc-400`}>
-            A research group at Duke University. The lab designs machine
-            learning models whose reasoning processes people
-            can understand: extremely sparse models, interpretable neural
-            networks, interpretable matching methods for causal inference,
-            and dimension reduction for data visualization. It applies them
-            to problems in healthcare, criminal justice, materials science
-            and computer vision.
+            Duke Interpretable Machine Learning Lab designs machine learning
+            models whose reasoning processes people can understand: extremely
+            sparse models, interpretable neural networks, interpretable
+            matching methods for causal inference, and dimension reduction for
+            data visualization. It applies them to problems in healthcare,
+            criminal justice, materials science and computer vision.
           </p>
         </div>
       </PageShell>

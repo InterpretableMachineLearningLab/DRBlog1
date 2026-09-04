@@ -9,11 +9,11 @@ export const site = {
   name: "Interpretable ML Lab",
   title: "Interpretable Machine Learning Lab",
   description:
-    "Interactive write-ups from the Interpretable Machine Learning Lab at Duke University. The lab designs machine learning models whose reasoning processes people can understand: extremely sparse models, interpretable neural networks, interpretable matching methods for causal inference, and dimension reduction for data visualization.",
+    "Interactive write-ups from the Duke Interpretable Machine Learning Lab, which designs machine learning models whose reasoning processes people can understand: extremely sparse models, interpretable neural networks, interpretable matching methods for causal inference, and dimension reduction for data visualization.",
   url: "https://interpretablemachinelearninglab.github.io",
   author: {
     name: "Interpretable ML Lab",
-    bio: "Interactive write-ups from the Interpretable Machine Learning Lab at Duke University.",
+    bio: "Interactive write-ups from the Duke Interpretable Machine Learning Lab.",
   },
   social: {
     github: "https://github.com/InterpretableMachineLearningLab",
