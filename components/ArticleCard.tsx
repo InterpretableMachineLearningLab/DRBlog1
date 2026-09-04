@@ -23,7 +23,7 @@ export function ArticleCard({ post }: { post: PostMeta }) {
         >
           {formatDate(post.date)} &middot; {post.readingTime} min read
         </time>
-        <h3 className="mt-2 text-lg font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
+        <h3 className="mt-2 text-lg font-semibold tracking-tight text-zinc-900 sm:text-xl dark:text-zinc-100">
           <Link
             href={`/articles/${post.slug}`}
             className="after:absolute after:inset-0"
@@ -33,7 +33,7 @@ export function ArticleCard({ post }: { post: PostMeta }) {
             </span>
           </Link>
         </h3>
-        <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+        <p className="mt-2 text-sm leading-relaxed text-zinc-600 sm:text-base dark:text-zinc-400">
           {post.excerpt}
         </p>
         {post.tags.length > 0 && (

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
-  "description": "Nova — a fast, minimal, static-export Next.js blog template by Pixel & Oak.",
+  "description": "Nova \u2014 a fast, minimal, static-export Next.js blog template by Pixel & Oak.",
   "author": "Pixel & Oak (https://pixelandoak.com)",
   "keywords": [
     "nextjs",
@@ -17,7 +17,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "node scripts/rss.mjs && next build",
-    "preview": "npx serve out"
+    "preview": "npx serve out",
+    "check:responsive": "node scripts/check-responsive.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

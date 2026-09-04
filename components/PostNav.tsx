@@ -19,7 +19,7 @@ function NavCard({
       <span className="text-xs font-medium tracking-wide text-zinc-500 uppercase dark:text-zinc-400">
         {isPrev ? "← Previous article" : "Next article →"}
       </span>
-      <span className="mt-2 text-sm font-semibold text-zinc-900 transition group-hover:text-indigo-600 dark:text-zinc-100 dark:group-hover:text-indigo-400">
+      <span className="mt-2 text-sm font-semibold text-zinc-900 transition group-hover:text-indigo-600 sm:text-base dark:text-zinc-100 dark:group-hover:text-indigo-400">
         {post.title}
       </span>
     </Link>

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { AuthorCard } from "@/components/AuthorCard";
 import { GradientCover } from "@/components/GradientCover";
 import { MarkdownContent } from "@/components/MarkdownContent";
+import { PageShell } from "@/components/PageShell";
 import { PostNav } from "@/components/PostNav";
 import { TagPill } from "@/components/TagPill";
 import { formatDate } from "@/lib/format";
@@ -65,7 +66,7 @@ export default async function ArticlePage({
   const older = index < posts.length - 1 ? toMeta(posts[index + 1]) : undefined;
 
   return (
-    <div className="mx-auto max-w-2xl px-5 pt-12 sm:px-6 sm:pt-16 lg:max-w-3xl lg:px-8">
+    <PageShell>
       <Link
         href="/articles"
         className="group inline-flex items-center gap-1.5 text-sm font-medium text-zinc-500 transition hover:text-indigo-600 dark:text-zinc-400 dark:hover:text-indigo-400"
@@ -107,6 +108,6 @@ export default async function ArticlePage({
 
       <PostNav older={older} newer={newer} />
       <AuthorCard />
-    </div>
+    </PageShell>
   );
 }
