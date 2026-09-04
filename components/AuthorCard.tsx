@@ -14,7 +14,7 @@ export function AuthorCard() {
         <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
           {site.author.name}
         </p>
-        <p className="mt-0.5 text-sm text-zinc-600 dark:text-zinc-400">
+        <p className="mt-0.5 text-sm text-zinc-600 sm:text-base dark:text-zinc-400">
           {site.author.bio}{" "}
           <a
             href={site.author.url}
@@ -22,7 +22,7 @@ export function AuthorCard() {
             rel="noopener noreferrer"
             className="font-medium text-indigo-600 transition hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300"
           >
-            Learn more →
+            Official lab page →
           </a>
         </p>
       </div>

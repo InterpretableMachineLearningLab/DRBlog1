@@ -65,7 +65,9 @@ The weights on those three terms change over three optimisation phases (`num_ite
 | `MN_ratio` | `0.5` | How much global-structure pull there is | Rarely. Raise it if the overall arrangement still looks scrambled on a dataset with known large-scale structure. |
 | `FP_ratio` | `2.0` | How much repulsion separates unrelated points | Rarely. Lower it if clusters are blown so far apart that within-cluster structure is unreadable. |
 
-The authors' position is that these are *not* meant to be tuned — as the [Duke DR Group](https://sites.duke.edu/dimensionreduction/) puts it, PaCMAP "has no parameters that are designed to be tuned." That is not modesty, it is the point: dimensionality reduction is unsupervised, so you have no held-out signal telling you which setting is correct. If you tune until the picture looks the way you expected, you have fitted the picture to your expectations, and you can no longer use it as evidence for them. Change a default when you have a stated reason, and report it.
+The authors' position is that these defaults are meant to be left alone. The Duke DR Group's survey of DR methods says it outright — PaCMAP "has no parameters that are designed to be tuned" — in a post arguing that "ideally, the parameters should be fixed so no one needs to try to tune them." (That page is offline as of September 2026; the quotations are from an [archived copy](https://web.archive.org/web/20260611102621/https://sites.duke.edu/dimensionreduction/).) The PaCMAP README is blunt about the other half of it: changing these values "will affect the result of dimension reduction significantly."
+
+Both are true, and together they are the actual rule. The parameters matter a great deal — which is precisely why you should not tune them by eye. Dimensionality reduction is unsupervised, so you have no held-out signal telling you which setting is correct. If you tune until the picture looks the way you expected, you have fitted the picture to your expectations and can no longer use it as evidence for them. Change a default when you have a stated reason, and report it.
 
 ## Reading a PaCMAP plot without over-reading it
 
