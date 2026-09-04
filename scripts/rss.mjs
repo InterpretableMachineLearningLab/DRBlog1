@@ -91,7 +91,7 @@ ${items}
 }
 
 function buildSitemap(posts) {
-  const staticRoutes = ["/", "/articles/", "/about/"];
+  const staticRoutes = ["/", "/articles/"];
   const today = new Date().toISOString().slice(0, 10);
 
   const urls = [

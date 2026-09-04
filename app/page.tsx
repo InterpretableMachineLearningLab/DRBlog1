@@ -1,6 +1,5 @@
 import { ArticleRow } from "@/components/ArticleRow";
 import { PageShell, bodyCopy } from "@/components/PageShell";
-import { ProvenanceNotice } from "@/components/ProvenanceNotice";
 import { getAllPosts, toMeta } from "@/lib/posts";
 
 export default function HomePage() {
@@ -24,7 +23,6 @@ export default function HomePage() {
             to problems in healthcare, criminal justice, materials science
             and computer vision.
           </p>
-          <ProvenanceNotice className="mt-6" />
         </div>
       </PageShell>
 

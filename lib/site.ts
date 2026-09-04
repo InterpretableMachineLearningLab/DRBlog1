@@ -18,22 +18,11 @@ export const site = {
     bio: "Interactive write-ups of work from Cynthia Rudin's research group at Duke University.",
     url: "https://users.cs.duke.edu/~cynthia/lab.html",
   },
-  /**
-   * Whose site this is, stated on the site itself.
-   *
-   * This is a GitHub Pages site under the lab's name, and until the PI has
-   * signed off on it, saying so is the honest thing to do. A reader landing
-   * here should not have to guess whether Cynthia Rudin wrote or approved
-   * this. Set `reviewed: true` once she has, and the notice disappears
-   * everywhere it is rendered.
-   */
-  provenance: {
-    reviewed: false,
+  /** The lab this site belongs to, and its PI. */
+  lab: {
     officialUrl: "https://users.cs.duke.edu/~cynthia/lab.html",
     piUrl: "https://users.cs.duke.edu/~cynthia/home.html",
     piName: "Cynthia Rudin",
-    notice:
-      "An unofficial site, built and maintained by lab members. Not reviewed or endorsed by the lab's PI.",
   },
   social: {
     github: "https://github.com/InterpretableMachineLearningLab",

@@ -1,11 +1,9 @@
 import Link from "next/link";
-import { ProvenanceNotice } from "@/components/ProvenanceNotice";
 import { site } from "@/lib/site";
 
 const links = [
   { href: "/", label: "Home" },
   { href: "/articles", label: "Articles" },
-  { href: "/about", label: "About" },
 ] as const;
 
 export function Footer() {
@@ -31,15 +29,14 @@ export function Footer() {
           <p>
             {site.title} · Duke University · PI{" "}
             <a
-              href={site.provenance.piUrl}
+              href={site.lab.piUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-zinc-700 transition hover:text-indigo-600 dark:text-zinc-300 dark:hover:text-indigo-400"
             >
-              {site.provenance.piName}
+              {site.lab.piName}
             </a>
           </p>
-          <ProvenanceNotice className="sm:text-right" />
         </div>
       </div>
     </footer>

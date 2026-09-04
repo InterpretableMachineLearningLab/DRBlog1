@@ -9,7 +9,6 @@ import { ChevronDownIcon } from "@/components/Icons";
 const links = [
   { href: "/", label: "Home" },
   { href: "/articles", label: "Articles" },
-  { href: "/about", label: "About" },
 ] as const;
 
 function isActive(pathname: string, href: string): boolean {
