@@ -15,15 +15,7 @@ export function AuthorCard() {
           {site.author.name}
         </p>
         <p className="mt-0.5 text-sm text-zinc-600 sm:text-base dark:text-zinc-400">
-          {site.author.bio}{" "}
-          <a
-            href={site.author.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-medium text-indigo-600 transition hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300"
-          >
-            Official lab page →
-          </a>
+          {site.author.bio}
         </p>
       </div>
     </div>

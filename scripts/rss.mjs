@@ -16,7 +16,7 @@ const SITE = {
   name: "Interpretable ML Lab",
   title: "Interpretable Machine Learning Lab",
   description:
-    "Interactive write-ups from the Interpretable Machine Learning Lab at Duke University, whose PI is Cynthia Rudin. The lab designs machine learning models whose reasoning processes people can understand: extremely sparse models, interpretable neural networks, interpretable matching methods for causal inference, and dimension reduction for data visualization.",
+    "Interactive write-ups from the Interpretable Machine Learning Lab at Duke University. The lab designs machine learning models whose reasoning processes people can understand: extremely sparse models, interpretable neural networks, interpretable matching methods for causal inference, and dimension reduction for data visualization.",
   url: "https://interpretablemachinelearninglab.github.io",
   language: "en-us",
 };

@@ -27,15 +27,7 @@ export function Footer() {
 
         <div className="flex max-w-md flex-col items-center gap-1 text-sm text-zinc-500 sm:items-end sm:text-right dark:text-zinc-400">
           <p>
-            {site.title} · Duke University · PI{" "}
-            <a
-              href={site.lab.piUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-zinc-700 transition hover:text-indigo-600 dark:text-zinc-300 dark:hover:text-indigo-400"
-            >
-              {site.lab.piName}
-            </a>
+            {site.title} · Duke University
           </p>
         </div>
       </div>
