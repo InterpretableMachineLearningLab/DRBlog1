@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "The Interpretable Machine Learning Lab at Duke University, whose PI is Cynthia Rudin. Sparse models, interpretable neural networks, interpretable matching for causal inference, and dimension reduction for data visualization.",
   openGraph: {
-    title: "About — Interpretable ML Lab",
+    title: "About | Interpretable ML Lab",
     description:
       "The Interpretable Machine Learning Lab at Duke University, whose PI is Cynthia Rudin.",
     url: "/about",
@@ -25,7 +25,7 @@ const linkClass =
 /**
  * Everything on this page is drawn from the PI's own homepage and lab page,
  * which are linked throughout. Where the wording matters it is quoted rather
- * than paraphrased — this page describes someone else's research programme,
+ * than paraphrased, because this page describes someone else's research
  * so it should not put positions in their mouth.
  */
 export default function AboutPage() {
@@ -62,11 +62,12 @@ export default function AboutPage() {
             &ldquo;interpretable machine learning and its applications; that
             is, designing machine learning models whose reasoning processes
             people can understand&rdquo;
-          </em>{" "}
-          — sparse models, interpretable neural networks, interpretable
-          matching methods for causal inference, and dimension reduction for
-          data visualization — applied to problems in healthcare, criminal
-          justice, materials science and computer vision.
+          </em>
+          . That covers sparse models, interpretable neural networks,
+          interpretable matching methods for causal inference, and dimension
+          reduction for data visualization, applied to problems in
+          healthcare, criminal justice, materials science and computer
+          vision.
         </p>
       </div>
 
@@ -82,7 +83,7 @@ export default function AboutPage() {
               Sparse models.
             </strong>{" "}
             Decision lists, decision trees and additive models that provably
-            optimise accuracy and sparsity, and optimal scoring systems —
+            optimise accuracy and sparsity, plus optimal scoring systems:
             sparse linear models with integer coefficients.
           </li>
           <li>
@@ -115,9 +116,9 @@ export default function AboutPage() {
             <em>
               &ldquo;ML algorithms return many good models and the user can
               choose among them&rdquo;
-            </em>{" "}
-            — the subject of her ICML 2024 spotlight, &ldquo;Amazing Things
-            Come From Having Many Good Models.&rdquo; A related line of work
+            </em>
+            . This is the subject of her ICML 2024 spotlight, &ldquo;Amazing
+            Things Come From Having Many Good Models.&rdquo; A related line of work
             asks why simple models so often suffice; the lab&apos;s hypothesis
             is that{" "}
             <em>
@@ -171,8 +172,8 @@ export default function AboutPage() {
             </strong>{" "}
             The first major effort to maintain an underground electrical
             distribution network with machine learning, with Con Edison in New
-            York City — 2013 INFORMS Innovative Applications in Analytics
-            Award.
+            York City, and winner of the 2013 INFORMS Innovative
+            Applications in Analytics Award.
           </li>
           <li>
             <strong className="font-semibold text-zinc-900 dark:text-zinc-100">

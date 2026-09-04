@@ -2,7 +2,7 @@
  * Site-wide configuration for the Interpretable ML Lab blog.
  *
  * Every page, the RSS feed and the sitemap read from here. The build script
- * keeps its own copy in scripts/rss.mjs — update that too if you change the
+ * keeps its own copy in scripts/rss.mjs; update that too if you change the
  * URL, name or title here.
  */
 export const site = {
@@ -22,7 +22,7 @@ export const site = {
    * Whose site this is, stated on the site itself.
    *
    * This is a GitHub Pages site under the lab's name, and until the PI has
-   * signed off on it, saying so is the honest thing to do — a reader landing
+   * signed off on it, saying so is the honest thing to do. A reader landing
    * here should not have to guess whether Cynthia Rudin wrote or approved
    * this. Set `reviewed: true` once she has, and the notice disappears
    * everywhere it is rendered.

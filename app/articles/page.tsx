@@ -6,11 +6,11 @@ import { getAllPosts, getAllTags, toMeta } from "@/lib/posts";
 export const metadata: Metadata = {
   title: "Articles",
   description:
-    "Writing from the Interpretable Machine Learning Lab — interactive posts on interpretable models, dimensionality reduction, and the algorithms that come out of the lab.",
+    "Interactive write-ups from the Interpretable Machine Learning Lab at Duke University: long-form explanations of the algorithms and ideas the lab works on.",
   openGraph: {
-    title: "Articles — Interpretable ML Lab",
+    title: "Articles | Interpretable ML Lab",
     description:
-      "Writing from the Interpretable Machine Learning Lab.",
+      "Interactive write-ups from the Interpretable Machine Learning Lab at Duke University.",
     url: "/articles",
     type: "website",
   },
@@ -28,9 +28,9 @@ export default function ArticlesPage() {
             All articles
           </h1>
           <p className={`mt-6 ${bodyCopy} text-zinc-600 dark:text-zinc-400`}>
-            Interactive writing from the lab — long-form explanations of the
-            algorithms and ideas we work on, each one designed to be read
-            and played with rather than just skimmed.
+            Long-form explanations of the algorithms and ideas the lab
+            works on, written to be read and played with rather than
+            skimmed.
           </p>
         </header>
 
