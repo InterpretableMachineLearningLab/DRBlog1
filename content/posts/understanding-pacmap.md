@@ -15,13 +15,13 @@ You ran t-SNE, got a picture, changed the random seed, and got a different pictu
 
 | What you're running into | Does PaCMAP help? |
 | --- | --- |
-| Two runs of the same method give two different pictures | **Yes.** This is the failure PaCMAP was designed around. |
+| Two runs of the same method give two different pictures | **Yes.** PaCMAP is built to keep two things consistent: the layout across random seeds, and the layout across parameter settings. |
 | Clusters look right, but their *arrangement* looks arbitrary | **Yes.** Global layout is the thing PaCMAP optimizes for explicitly. |
 | You have to hand-tune perplexity or `n_neighbors` to get anything sensible | **Yes.** PaCMAP's defaults are meant to be left alone (see below). |
 | Cluster boundaries are mushy and neighboring classes bleed together | **Partly.** Try [LocalMAP](#localmap--when-your-clusters-bleed-into-each-other) instead. |
 | You need to embed *new* points later without refitting | **No.** Use [ParamRepulsor](#paramrepulsor--when-you-need-to-embed-new-points-later). |
 | You need to know which parts of the layout are trustworthy | **No.** Use [RashomonDR](#rashomondr--when-you-need-to-know-what-to-trust). |
-| You need to read distances off the plot quantitatively | **No**, and no neighbor-embedding method will give you that. Use PCA or classical MDS, which have a defined metric interpretation. |
+| You need to read distances off the plot quantitatively | **No**, and no neighbor-embedding method will give you that. Use PCA or classical MDS, which have a defined metric interpretation. **Warning:** neither preserves local and global structure together. PCA in particular does not preserve local structure at all, so distinct clusters can land on top of each other. |
 
 ## The five lines you actually need
 
@@ -41,7 +41,7 @@ Y = reducer.fit_transform(X, init="pca")    # (n_samples, 2)
 That is the whole intended workflow. A few things worth knowing about what the defaults do to your data before you go looking for knobs to turn:
 
 - **It runs PCA on your input first.** With `apply_pca=True` (the default), any input wider than 100 columns is reduced to 100 dimensions with a truncated SVD, and the pairs are built in *that* space. It is a large speed win and it denoises, but if you need pairs constructed on your raw features, pass `apply_pca=False`.
-- **Set `random_state` anyway.** PaCMAP is far more stable across seeds than t-SNE or UMAP, but "more stable" is not "deterministic", and you want to be able to reproduce the figure that ends up in your paper.
+- **Set `random_state` to anything.** PaCMAP is far more stable across seeds than t-SNE or UMAP, but "more stable" is not "deterministic", and you want to be able to reproduce the figure that ends up in your paper.
 - **`init="pca"` is the default**, and unlike UMAP the final layout does not hinge on it. The optimization schedule below is what fixes the global structure.
 - **Let `n_neighbors` scale with your data.** The default is a flat `10`. Pass `n_neighbors=None` instead and PaCMAP scales it for you: `10` up to 10 000 points, then `round(10 + 15 * (log10(n) - 4))` above that. On a large dataset this is usually the one change worth making.
 
