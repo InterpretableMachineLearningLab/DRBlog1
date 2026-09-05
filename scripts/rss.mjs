@@ -2,8 +2,8 @@
  * Build-time feed generation.
  *
  * Runs before `next build` (see the "build" script in package.json) and emits:
- *   - public/rss.xml      — RSS 2.0 feed of all posts
- *   - public/sitemap.xml  — sitemap for every static route + post
+ *   - public/rss.xml      RSS 2.0 feed of all posts
+ *   - public/sitemap.xml  sitemap for every static route + post
  *
  * Plain Node, no framework required: `node scripts/rss.mjs`.
  * NOTE: keep SITE in sync with lib/site.ts if you change your URL or title.
