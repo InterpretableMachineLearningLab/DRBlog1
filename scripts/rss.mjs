@@ -13,11 +13,11 @@ import path from "node:path";
 import matter from "gray-matter";
 
 const SITE = {
-  name: "Nova",
-  title: "Nova — Notes on the fast, simple web",
+  name: "Interpretable ML Lab",
+  title: "Interpretable Machine Learning Lab",
   description:
-    "Nova is the journal of Pixel & Oak, a studio that builds fast, SEO-ready websites. Essays on performance, static sites, design and the craft of the web.",
-  url: "https://pixelandoak-nova.pages.dev",
+    "Interactive write-ups from the Duke Interpretable Machine Learning Lab, which designs machine learning models whose reasoning processes people can understand: extremely sparse models, interpretable neural networks, interpretable matching methods for causal inference, and dimension reduction for data visualization.",
+  url: "https://interpretablemachinelearninglab.github.io",
   language: "en-us",
 };
 
@@ -91,7 +91,7 @@ ${items}
 }
 
 function buildSitemap(posts) {
-  const staticRoutes = ["/", "/articles/", "/about/"];
+  const staticRoutes = ["/", "/articles/"];
   const today = new Date().toISOString().slice(0, 10);
 
   const urls = [

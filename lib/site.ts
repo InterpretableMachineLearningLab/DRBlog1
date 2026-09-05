@@ -1,25 +1,22 @@
 /**
- * Site-wide configuration.
+ * Site-wide configuration for the Interpretable ML Lab blog.
  *
- * Change these values first when making Nova your own — every page, the RSS
- * feed and the sitemap read from here (the build script keeps its own copy in
- * scripts/rss.mjs, so update that too if you change the URL or title).
+ * Every page, the RSS feed and the sitemap read from here. The build script
+ * keeps its own copy in scripts/rss.mjs; update that too if you change the
+ * URL, name or title here.
  */
 export const site = {
-  name: "Nova",
-  title: "Nova — Notes on the fast, simple web",
+  name: "Interpretable ML Lab",
+  title: "Interpretable Machine Learning Lab",
   description:
-    "Nova is the journal of Pixel & Oak, a studio that builds fast, SEO-ready websites. Essays on performance, static sites, design and the craft of the web.",
-  url: "https://pixelandoak-nova.pages.dev",
+    "Interactive write-ups from the Duke Interpretable Machine Learning Lab, which designs machine learning models whose reasoning processes people can understand: extremely sparse models, interpretable neural networks, interpretable matching methods for causal inference, and dimension reduction for data visualization.",
+  url: "https://interpretablemachinelearninglab.github.io",
   author: {
-    name: "Pixel & Oak",
-    bio: "A web studio building fast, SEO-ready websites for small businesses.",
-    url: "https://pixelandoak.com/templates/nextjs-blog-template/",
+    name: "Interpretable ML Lab",
+    bio: "Interactive write-ups from the Duke Interpretable Machine Learning Lab.",
   },
   social: {
-    github: "https://github.com/haider484991",
-    x: "https://x.com/pixelandoak",
-    linkedin: "https://www.linkedin.com/company/pixelandoak",
+    github: "https://github.com/InterpretableMachineLearningLab",
     rss: "/rss.xml",
   },
 } as const;

@@ -1,17 +1,18 @@
 import Link from "next/link";
+import { PageShell, bodyCopy } from "@/components/PageShell";
 
 export default function NotFound() {
   return (
     <div>
-      <div className="mx-auto flex max-w-2xl flex-col items-start px-4 pt-24 sm:px-6 sm:pt-32 lg:px-8">
+      <PageShell className="flex flex-col items-start">
         <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400">
           404
         </p>
         <h1 className="mt-3 text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl dark:text-zinc-100">
           Lost among the stars.
         </h1>
-        <p className="mt-6 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
-          The page you&apos;re looking for doesn&apos;t exist — it may have
+        <p className={`mt-6 ${bodyCopy} text-zinc-600 dark:text-zinc-400`}>
+          The page you&apos;re looking for doesn&apos;t exist. It may have
           moved, or the link was mistyped.
         </p>
         <Link
@@ -20,7 +21,7 @@ export default function NotFound() {
         >
           Back to home
         </Link>
-      </div>
+      </PageShell>
     </div>
   );
 }

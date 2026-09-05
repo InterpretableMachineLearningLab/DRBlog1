@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Understanding PaCMAP</title>
+
+    <meta property="og:title" content="Understanding PaCMAP">
+    <meta property="og:description" content="A local port of PAIR's Understanding UMAP article, rewired for PaCMAP.">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="/pacmap/bundle.css" />
+
+    <!-- KaTeX for math notation (Katex.svelte renders imperatively via window.katex) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.12.0/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.106.2/build/three.min.js"></script>
+    <script src="/pacmap/scatter-gl.min.js"></script>
+  </head>
+
+  <body>
+    <script defer src="/pacmap/bundle.js" type="text/javascript"></script>
+
+    <!--
+      Visible credit for the work this article is adapted from.
+
+      The Apache-2.0 header and the "adapted from Understanding UMAP" note
+      live in the Svelte source, which the compiler strips: a reader of the
+      published page saw no attribution at all. The Svelte source is not in
+      this repository, so the credit is added here instead.
+
+      Svelte mounts with `target: document.body`, which APPENDS, so an element
+      written here would render above the article. The script moves it to the
+      end once the app has mounted.
+    -->
+    <footer id="article-credit" hidden>
+      <p>
+        Adapted from
+        <a href="https://pair-code.github.io/understanding-umap/">Understanding UMAP</a>
+        by Andy Coenen and Adam Pearce (Google PAIR, 2019), used under the
+        <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>.
+        The text, figures and data here were rewritten for PaCMAP.
+      </p>
+    </footer>
+
+    <script>
+      /*
+        Stamp each toy-dataset tile with its index in the demo list.
+
+        Both pickers render the same 24 datasets, but they group them
+        differently and Figure 6 re-chunks its rows with the viewport (four
+        rows of six on a desktop, three rows of eight on a phone), so a CSS
+        :nth-child rule that is correct on one screen is wrong on another.
+        Indexing by position in the container fixes that. global.css hides the
+        withdrawn datasets by this attribute.
+
+        The Svelte source for this article is not in this repository, so this
+        runs from outside the app; the observer re-stamps after the app
+        re-renders or re-chunks a row.
+      */
+      (function () {
+        var PICKERS = [".data-menu", ".demo-select"];
+
+        function stamp() {
+          PICKERS.forEach(function (selector) {
+            document.querySelectorAll(selector).forEach(function (root) {
+              var tiles = root.querySelectorAll(".demo-data");
+              for (var i = 0; i < tiles.length; i++) {
+                if (tiles[i].getAttribute("data-demo-index") !== String(i)) {
+                  tiles[i].setAttribute("data-demo-index", String(i));
+                }
+              }
+            });
+          });
+        }
+
+        var queued = false;
+        function schedule() {
+          if (queued) return;
+          queued = true;
+          requestAnimationFrame(function () { queued = false; stamp(); });
+        }
+
+        stamp();
+        addEventListener("load", stamp);
+        new MutationObserver(schedule).observe(document.body, {
+          childList: true,
+          subtree: true,
+        });
+      })();
+    </script>
+
+    <script>
+      addEventListener("load", function () {
+        var el = document.getElementById("article-credit");
+        if (!el) return;
+        document.body.appendChild(el);
+        el.hidden = false;
+      });
+    </script>
+  </body>
+</html>

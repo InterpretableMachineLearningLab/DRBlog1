@@ -1,0 +1,491 @@
+/* ============================================================================
+   Understanding PaCMAP — editorial styling.
+   Layered on top of Google PAIR's original global.css (Apache 2.0).
+   ========================================================================== */
+
+:root {
+  --bg:            #ffffff;
+  --bg-soft:       #f7f8fa;
+  --bg-panel:      #f2f3f6;
+  --border-soft:   #e5e7eb;
+  --border:        #cfd6df;
+
+  --ink:           #1f2937;
+  --ink-soft:      #4b5563;
+  --ink-muted:     #6b7280;
+  --ink-faint:     #9ca3af;
+
+  --accent:        #1a4b7a;
+  --accent-strong: #103a63;
+  --accent-hover:  #2c6fa8;
+
+  --code-bg:       #eef1f5;
+  --code-ink:      #1f2937;
+
+  --figure-bg:     #ffffff;
+  --figure-border: #eaecef;
+
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, "Helvetica Neue", sans-serif;
+  --serif: "Source Serif Pro", "Georgia", "Cambria", "Times New Roman", serif;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+html, body {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  background: var(--bg);
+}
+
+body {
+  color: var(--ink);
+  margin: 0;
+  padding: 32px 12px 96px;
+  box-sizing: border-box;
+  font-family: var(--sans);
+  font-feature-settings: "kern" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---------- links ------------------------------------------------------ */
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 75, 122, 0.25);
+  transition: color 120ms ease, border-color 120ms ease;
+}
+a:hover {
+  color: var(--accent-hover);
+  border-bottom-color: var(--accent-hover);
+}
+a:visited {
+  color: var(--accent-strong);
+}
+
+/* ---------- headings --------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ink);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin: 2.5em 0 0.6em;
+}
+
+.article-title {
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 6px;
+}
+
+h2 {
+  font-size: 1.55rem;
+  margin-top: 3.5em;
+  padding-top: 1.2em;
+  border-top: 1px solid var(--border-soft);
+}
+h2:first-of-type { border-top: none; padding-top: 0; }
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 2.2em;
+}
+
+h4 {
+  font-size: 1.02rem;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  margin-top: 2em;
+}
+
+/* ---------- prose ------------------------------------------------------ */
+
+p {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: var(--ink);
+  margin: 0.9em 0;
+}
+
+em, i {
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+strong, b {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+ul, ol {
+  padding-left: 1.4em;
+  margin: 0.9em 0;
+}
+li {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin: 0.35em 0;
+  color: var(--ink);
+}
+li > p { margin: 0.2em 0; }
+
+blockquote {
+  margin: 1.4em 0;
+  padding: 0.6em 1.1em;
+  color: var(--ink-soft);
+  border-left: 3px solid var(--accent);
+  background: var(--bg-soft);
+  border-radius: 0 4px 4px 0;
+  font-style: italic;
+}
+
+/* ---------- code ------------------------------------------------------- */
+
+code {
+  font-family: var(--mono);
+  font-style: normal;
+  padding: 0.15em 0.4em;
+  font-size: 0.88em;
+  background-color: var(--code-bg);
+  color: var(--code-ink);
+  border-radius: 3px;
+}
+
+pre {
+  font-family: var(--mono);
+  background: var(--bg-panel);
+  color: var(--ink);
+  padding: 14px 18px;
+  border-radius: 6px;
+  border: 1px solid var(--border-soft);
+  overflow-x: auto;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+pre code {
+  padding: 0;
+  background: transparent;
+  font-size: inherit;
+}
+
+/* ---------- tables ----------------------------------------------------- */
+
+table {
+  border-collapse: collapse;
+  margin: 1.4em auto;
+  font-size: 0.95rem;
+  background: var(--figure-bg);
+  border: 1px solid var(--border-soft);
+  border-radius: 6px;
+  overflow: hidden;
+}
+th, td {
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--border-soft);
+  text-align: left;
+}
+th {
+  background: var(--bg-panel);
+  font-weight: 600;
+  color: var(--ink);
+}
+tr:last-child td { border-bottom: none; }
+
+/* ---------- form controls --------------------------------------------- */
+
+label { display: block; }
+
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0.4em;
+  margin: 0 0 0.5em 0;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: white;
+  color: var(--ink);
+}
+input:disabled { color: var(--ink-faint); }
+input[type="range"] { height: 0; }
+
+button {
+  background-color: var(--bg-panel);
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+button:hover { background-color: #e6e9ee; border-color: var(--ink-faint); }
+button:active { background-color: #dcdfe4; }
+button:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ---------- article-specific bits ------------------------------------- */
+
+.figure-number {
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+.katex-block {
+  text-align: center;
+  margin: 22px auto;
+  padding: 14px 12px;
+  background: var(--bg-soft);
+  border-radius: 6px;
+  overflow-x: auto;
+}
+.katex-inline { display: inline-block; }
+
+.acknowledgements p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+footer {
+  margin-top: 4em;
+  padding-top: 2em;
+  border-top: 1px solid var(--border-soft);
+}
+
+/* ---------- material icons (already loaded via public font files) ----- */
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(MaterialIcons-Regular.eot);
+  src: local("Material Icons"), local("MaterialIcons-Regular"),
+    url(MaterialIcons-Regular.woff2) format("woff2"),
+    url(MaterialIcons-Regular.woff) format("woff"),
+    url(MaterialIcons-Regular.ttf) format("truetype");
+}
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+}
+
+/* ============================================================================
+   Responsive fixes.
+
+   The Svelte sources for this article are not in this repository — only the
+   compiled bundle — so these override bundle.css from here. `!important` is
+   required twice over: the bundle's selectors carry a `.svelte-<hash>` class
+   that outranks a bare class selector, and bundle.css is loaded after this
+   file. The hashes below are copied verbatim from bundle.css and are pinned
+   to it; if the Svelte app is ever rebuilt, re-copy them.
+   ========================================================================== */
+
+/* ---------- the tablet dead zone --------------------------------------- */
+/* The bundle stacks its side-by-side figure panels at max-width: 800px, but
+   its 390px plot canvases need about 850px of figure width before they fit
+   two-across. An iPad in portrait (820px) lands in the gap: too narrow to fit
+   the layout, too wide to trigger the stacking, so the figures ran 31px past
+   the screen. Stacking at 1023px would fix that but costs the 2x2 mammoth
+   grid, which reads well on a tablet -- so the tablet case is handled instead
+   by the canvas and min-width rules further down, which let the panels shrink
+   to fit. Measured: 0px overflow at 820 and 1024 with the grid intact. */
+
+/* ---------- phones: reinforce the bundle's own stacking ---------------- */
+/* These are the bundle's max-width:800px rules replayed verbatim with
+   !important. The bundle already declares them, but several are outranked at
+   phone widths by later same-specificity rules, which left fixed-width
+   canvases sitting in half-width panels. Selectors and values are copied from
+   bundle.css unchanged; only the precedence differs. */
+
+@media (max-width: 800px) {
+  .container.svelte-vv6lwr { flex-direction: column !important; }
+  .top-row.svelte-s92b30 { flex-direction: column !important; }
+
+  .container.svelte-sqwiqe { flex-direction: column !important; }
+  .figures-container.svelte-sqwiqe { width: 90% !important; }
+  .menu.svelte-sqwiqe { width: 100% !important; }
+  .demo-select.svelte-sqwiqe { margin-top: 20px !important; }
+
+  .grid.svelte-8mwvr7 { grid-template-columns: 1fr !important; }
+  .wrap.svelte-1pml19h { grid-template-columns: 1fr !important; }
+  .panels.svelte-1uz34nb { grid-template-columns: 1fr !important; }
+
+  .container.svelte-1jfiwdb { width: 90% !important; margin-bottom: 0 !important; }
+  .container.svelte-w7grqr { width: 90% !important; margin-bottom: 0 !important; }
+  .container.svelte-1nfl3b0 { width: 100% !important; margin-bottom: 10px !important; }
+  .container.svelte-dmb53g { width: 100% !important; margin-bottom: 0 !important; }
+  .scatter-gl-container.svelte-dmb53g { min-height: 300px !important; }
+
+  .container.svelte-1dt95zr { min-height: 400px !important; }
+  .orbit.svelte-1dt95zr { top: 0 !important; }
+}
+
+/* ---------- things that overflow at any width -------------------------- */
+
+/* The plot canvases are sized in pixels. Let them scale down rather than
+   force the page wider than the screen. */
+canvas {
+  max-width: 100% !important;
+  height: auto;
+}
+
+/* Grid and flex children have a min-content floor by default, which is what
+   lets a fixed-width canvas widen the track it sits in. */
+.cell,
+.panel,
+.container {
+  min-width: 0;
+}
+
+/* KaTeX lays display math out at a fixed width and it cannot reflow, so give
+   the equation its own scroll region instead of letting it widen the page. */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  padding-bottom: 2px;
+}
+
+/* ---------- phone ------------------------------------------------------ */
+
+@media (max-width: 640px) {
+  body {
+    padding: 20px 10px 64px;
+  }
+
+  /* Figure padding is a large share of a 390px screen; give it to the plots. */
+  figure {
+    padding: 10px 8px 4px !important;
+  }
+
+  p { font-size: 1.02rem; }
+  li { font-size: 1rem; }
+  h2 { font-size: 1.35rem; padding-top: 0.9em; margin-top: 2.6em; }
+  h3 { font-size: 1.1rem; }
+  table { font-size: 0.88rem; }
+  .katex-display { font-size: 0.9em; }
+}
+
+/* Bare URLs in the Code section are single unbreakable tokens ~460px wide,
+   which is wider than a phone. `anywhere` (not `break-word`) is required:
+   only `anywhere` reduces the element's min-content width, which is what
+   stops it widening the page. */
+a {
+  overflow-wrap: anywhere;
+}
+
+/* The article wrapper is `max-width: 780px; width: 100%; padding: 0 18px`
+   under the default content-box, so its 36px of padding sits outside the
+   100% and pushes the page 36px wider than the screen. */
+.container.svelte-1gw5lvs {
+  box-sizing: border-box;
+}
+
+/* ---------- credit footer (see index.html) ----------------------------- */
+
+#article-credit {
+  max-width: 780px;
+  margin: 4em auto 0;
+  padding: 1.6em 18px 0;
+  border-top: 1px solid var(--border-soft);
+  box-sizing: border-box;
+}
+
+#article-credit p {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--ink-muted);
+  margin: 0.5em 0;
+}
+
+/* ============================================================================
+   Toy-dataset pickers (Figures 5 and 6)
+
+   Six of the 24 toy datasets are withdrawn: Linked Clusters, Rotated lines,
+   Rotated lines (clustered), Sine frequency, Orthogonal Steps and Equally
+   Spaced. The first four duplicate structure already shown by their
+   neighbours in the grid, and the last two project to a near-empty panel at
+   these settings, so as thumbnails they read as broken rather than as data.
+
+   They are hidden here rather than deleted from the data, because the Svelte
+   source for this article is not in this repository and every visualisation
+   indexes its precomputed frames by POSITION in the demo list
+   (allData[selectedDemoIndex]). Dropping entries from the JSON would shift
+   every later dataset onto the wrong animation. Hiding keeps the indices
+   intact, so nothing can desynchronise.
+
+   Indices removed (0-based): 1, 2, 3, 4, 19, 22.
+   ========================================================================== */
+
+/* The two pickers hold the same 24 tiles but group them differently, and
+   Figure 6 re-chunks its rows with the viewport (four rows of six on a
+   desktop, three rows of eight on a phone), so a :nth-child rule that is
+   correct on one screen is wrong on another. A small script in index.html
+   stamps every tile with its position in the demo list instead; these rules
+   key off that, which holds at any width. */
+
+.demo-data[data-demo-index="1"],
+.demo-data[data-demo-index="2"],
+.demo-data[data-demo-index="3"],
+.demo-data[data-demo-index="4"],
+.demo-data[data-demo-index="19"],
+.demo-data[data-demo-index="22"] {
+  display: none !important;
+}
+
+/* ---------- reflow both pickers ----------------------------------------- */
+/* The tiles were laid out with floats and percentage widths, which leaves
+   ragged rows once six are hidden -- Figure 6 is worst, because its four rows
+   are fixed containers and would come out 2, 6, 6, 4. Both pickers become one
+   grid instead. `display: contents` on Figure 6's row wrappers lets its tiles
+   participate in the outer grid directly, so the remaining 18 fill 6 x 3
+   evenly without renumbering anything. */
+
+.data-menu,
+.demo-select {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  float: none !important;
+}
+
+.demo-select > .demos {
+  display: contents !important;
+}
+
+.data-menu > .demo-data,
+.demo-select .demo-data {
+  width: auto !important;
+  float: none !important;
+  margin: 0 !important;
+}
+
+@media (min-width: 480px) {
+  .data-menu,
+  .demo-select {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .data-menu,
+  .demo-select {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
