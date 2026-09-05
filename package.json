@@ -16,9 +16,10 @@
   ],
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/rss.mjs && next build",
+    "build": "node scripts/rss.mjs && next build && node scripts/check-spelling.mjs",
     "preview": "npx serve out",
-    "check:responsive": "node scripts/check-responsive.mjs"
+    "check:responsive": "node scripts/check-responsive.mjs",
+    "check:spelling": "node scripts/check-spelling.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
